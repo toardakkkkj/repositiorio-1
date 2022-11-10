@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>BR Recordes</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<main>
+			<section class="container">
+				<h2>Recordistas</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do Recordista">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Recorde</th>
+							<th>Tempo</th>
+							<th>Plataforma</th>
+
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="paciente" id="primeiro-recordista">
+							<td class="info-nome">Paulo_o_loko</td>
+							<td class="info-recorde">1000000</td>
+							<td class="info-tempo">10min</td>
+							<td class="info-plataforma">Celular</td>
+						</tr>
+
+						<tr class="paciente" id="segundo-recordista">
+							<td class="info-nome">Careca_o_Cabeludo</td>
+							<td class="info-recorde">798000</td>
+							<td class="info-tempo">8min</td>
+							<td class="info-plataforma">Pc</td>
+						</tr>
+
+						<tr class="paciente" id="terceiro-recordista">
+							<td class="info-nome">JôSoares</td>
+							<td class="info-recorde">760000</td>
+							<td class="info-tempo">6min</td>
+							<td class="info-plataforma">Celular</td>
+						</tr>
+
+						<tr class="paciente" id="quarto-recordista">
+							<td class="info-nome">Raul_Gameplay</td>
+							<td class="info-recorde">150000</td>
+							<td class="info-tempo">4min</td>
+							<td class="info-plataforma">Pc</td>
+						</tr>
+
+						<tr class="paciente" id="quinto-recordista">
+							<td class="info-nome">Água_molhada</td>
+							<td class="info-recorde">240000</td>
+							<td class="info-tempo">4min</td>
+							<td class="info-plataforma">Pc</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os recordistas</span>
+
+				<button id="buscar-recordistas" class="botao bto-principal">Buscar Recordistas</button>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo recordista</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu recordista" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="recorde">Recorde:</label>
+		            <input id="recorde" name="recorde" type="text" placeholder="digite o recorde do seu recordista" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="tempo">Tempo:</label>
+		            <input id="tempo" name="tempo" type="text" placeholder="digite o tempo do seu recordista" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="plataforma">Plataforma:</label>
+		            <input id="plataforma" type="text" placeholder="digite a plataforma do seu recordista" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-recordiista" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+
+		<script src="js/calcula-plataforma.js" ></script>
+		<script src="js/form.js" ></script>
+		<script src="js/remover-recordista.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-recordista.js" ></script>
+
+	</body>
+</html>
